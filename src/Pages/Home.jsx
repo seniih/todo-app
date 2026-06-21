@@ -61,11 +61,12 @@ export default function Home() {
 
   const activeCount = todos.filter((t) => !t.isCompleted).length;
   const completedCount = todos.filter((t) => t.isCompleted).length;
+  const progress = todos.length > 0 ? Math.round((completedCount / todos.length) * 100) : 0;
 
   return (
     <div className="app-wrap">
       <div className="header">
-        <h1>Yapılacaklar</h1>
+        <h1>Yapılacaklar Listesi</h1>
         <span>{todos.length} görev</span>
       </div>
 
@@ -79,6 +80,19 @@ export default function Home() {
         />
         <button type="submit">Ekle</button>
       </form>
+
+      {/* İLERLEME ÇUBUĞU */}
+      {todos.length > 0 && (
+        <div className="progress-wrap">
+          <div className="progress-label">
+            <span>İlerleme</span>
+            <span>{progress}%</span>
+          </div>
+          <div className="progress-track">
+            <div className="progress-fill" style={{ width: `${progress}%` }} />
+          </div>
+        </div>
+      )}
 
       {/* FİLTRELER */}
       <div className="filters">
@@ -96,7 +110,11 @@ export default function Home() {
       {/* LİSTELEME */}
       <ul className="todo-list">
         {filteredTodos.length === 0 ? (
-          <div className="empty-state">Burada hiçbir şey yok.</div>
+          <div className="empty-state">
+            {filter === 'ACTIVE' && completedCount === todos.length && todos.length > 0
+              ? 'Harika! Tüm görevler tamamlandı.'
+              : 'Burada hiçbir şey yok.'}
+          </div>
         ) : (
           filteredTodos.map((todo) => (
             <TodoItem
@@ -114,7 +132,7 @@ export default function Home() {
         <div className="bottom-bar">
           <span>{activeCount} kaldı</span>
           {completedCount > 0 && (
-            <button onClick={clearCompleted}>Bitenleri sil</button>
+            <button onClick={clearCompleted}>Tamamlananları Temizle</button>
           )}
         </div>
       )}
