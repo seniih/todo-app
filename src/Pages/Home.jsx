@@ -150,7 +150,7 @@ export default function Home() {
         {/* ALT ÇUBUK */}
         {todos.length > 0 && (
           <div className="bottom-bar">
-            <span>{activeCount} kaldı</span>
+            <span>{activeCount} görev kaldı</span>
             {completedCount > 0 && (
               <button onClick={clearCompleted}>Tamamlananları Temizle</button>
             )}

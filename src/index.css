@@ -52,8 +52,9 @@ body {
 
 .stats-total {
   display: flex;
-  align-items: baseline;
-  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
   margin-bottom: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid #2d3448;
@@ -190,27 +191,30 @@ body {
   transition: width 0.3s ease;
 }
 
-/* Filtreler */
+/* Filtreler — kayan segment */
 .filters {
   display: flex;
-  gap: 16px;
-  margin-bottom: 24px;
+  gap: 4px;
+  margin-bottom: 20px;
   margin-top: 20px;
-  border-bottom: 1px solid #1e2535;
-  padding-bottom: 0;
+  background: #131929;
+  border: 1px solid #2d3448;
+  border-radius: 10px;
+  padding: 4px;
 }
 
 .filters button {
-  background: none;
+  flex: 1;
+  background: transparent;
   border: none;
-  border-bottom: 2px solid transparent;
+  border-radius: 7px;
   padding: 8px 0;
-  margin-bottom: -1px;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 500;
   font-family: inherit;
   color: #4a5568;
   cursor: pointer;
-  transition: color 0.15s, border-color 0.15s;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 .filters button:hover {
@@ -218,8 +222,9 @@ body {
 }
 
 .filters button.active {
+  background: #1e2535;
   color: #e5e5e5;
-  border-bottom-color: #4a6fa5;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Liste */
