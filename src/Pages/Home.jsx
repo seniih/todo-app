@@ -67,7 +67,6 @@ export default function Home() {
     <div className="app-wrap">
       <div className="header">
         <h1>Yapılacaklar Listesi</h1>
-        <span>{todos.length} görev</span>
       </div>
 
       {/* İSTATİSTİK KARTI */}

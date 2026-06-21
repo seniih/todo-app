@@ -15,7 +15,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 60px 16px;
+  padding: 72px 20px;
 }
 
 .app-wrap {
@@ -23,22 +23,17 @@ body {
   max-width: 600px;
 }
 
+/* Başlık */
 .header {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  text-align: center;
 }
 
 .header h1 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #6a9fd8;
   letter-spacing: -0.5px;
-}
-
-.header span {
-  font-size: 0.85rem;
-  color: #4a5568;
-  margin-top: 4px;
-  display: block;
 }
 
 /* İstatistik kartı */
@@ -75,18 +70,19 @@ body {
 .stats-row {
   display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: space-evenly;
 }
 
 .stats-item {
   display: flex;
-  align-items: baseline;
-  gap: 6px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .stats-num {
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .stats-num.active {
@@ -104,7 +100,7 @@ body {
 
 .stats-divider {
   width: 1px;
-  height: 16px;
+  height: 28px;
   background: #2d3448;
 }
 
@@ -112,8 +108,8 @@ body {
 .card {
   background: #1a2030;
   border: 1px solid #2d3448;
-  border-radius: 12px;
-  padding: 24px;
+  border-radius: 14px;
+  padding: 28px;
 }
 
 /* Form */
@@ -127,9 +123,9 @@ body {
   flex: 1;
   background: #1e2535;
   border: 1px solid #2d3448;
-  border-radius: 8px;
-  padding: 11px 14px;
-  font-size: 0.9rem;
+  border-radius: 9px;
+  padding: 13px 16px;
+  font-size: 0.95rem;
   color: #e5e5e5;
   font-family: inherit;
   outline: none;
@@ -148,9 +144,9 @@ body {
   background: #4a6fa5;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  padding: 11px 18px;
-  font-size: 0.875rem;
+  border-radius: 9px;
+  padding: 13px 22px;
+  font-size: 0.95rem;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
@@ -244,26 +240,26 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 22px;
   padding-top: 16px;
   border-top: 1px solid #1e2535;
 }
 
 .bottom-bar span {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #4a5568;
 }
 
 .bottom-bar button {
   background: none;
   border: none;
-  color: #4a5568;
-  font-size: 0.8rem;
+  color: #c0392b;
+  font-size: 0.85rem;
   font-family: inherit;
   cursor: pointer;
   transition: color 0.15s;
 }
 
 .bottom-bar button:hover {
-  color: #8899aa;
+  color: #e74c3c;
 }
