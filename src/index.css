@@ -20,16 +20,15 @@ body {
 
 .app-wrap {
   width: 100%;
-  max-width: 480px;
+  max-width: 600px;
 }
 
-/* Başlık */
 .header {
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
 
 .header h1 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #fff;
   letter-spacing: -0.5px;
@@ -37,9 +36,83 @@ body {
 
 .header span {
   font-size: 0.85rem;
-  color: #555;
+  color: #4a5568;
   margin-top: 4px;
   display: block;
+}
+
+/* İstatistik kartı */
+.stats-card {
+  background: #1e2535;
+  border: 1px solid #2d3448;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.stats-total {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #2d3448;
+}
+
+.stats-total-num {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.stats-total-label {
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+.stats-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.stats-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.stats-num {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.stats-num.active {
+  color: #4a6fa5;
+}
+
+.stats-num.done {
+  color: #3a8f6a;
+}
+
+.stats-label {
+  font-size: 0.8rem;
+  color: #4a5568;
+}
+
+.stats-divider {
+  width: 1px;
+  height: 16px;
+  background: #2d3448;
+}
+
+/* İçerik kartı */
+.card {
+  background: #1a2030;
+  border: 1px solid #2d3448;
+  border-radius: 12px;
+  padding: 24px;
 }
 
 /* Form */
@@ -90,7 +163,8 @@ body {
 
 /* İlerleme çubuğu */
 .progress-wrap {
-  margin-bottom: 20px;
+  margin-top: 16px;
+  margin-bottom: 4px;
 }
 
 .progress-label {
@@ -101,9 +175,10 @@ body {
   margin-bottom: 6px;
 }
 
+/* İlerleme çubuğu için track rengi kart arka planına uygun */
 .progress-track {
   height: 4px;
-  background: #1e2535;
+  background: #2d3448;
   border-radius: 99px;
   overflow: hidden;
 }
